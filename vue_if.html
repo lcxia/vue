@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="if">
+        <div v-if="flag">
+            v-if
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#if",
+            data: {
+                flag: false
+            }
+        });
+        //app.flag = true;
+    </script>
+  </body>
+</html>

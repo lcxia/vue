@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="for">
+        <div v-for="data in datas">
+            {{data.msg}}
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#for",
+            data: {
+                datas: [
+                    {
+                        msg: "for1"
+                    },
+                    {
+                        msg: "for2"
+                    }
+                ]
+            }
+        });
+        //app.datas.push({ msg: 'for' })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="on">
+        <div>
+            {{msg}}
+        </div>
+        <button v-on:click="clk">
+            提交
+        </button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#on",
+            data: {
+                msg: "on"
+            },
+            methods: {
+                clk: function(){
+                    this.msg = this.msg.toUpperCase();
+                }
+            }
+        });
+    </script>
+  </body>
+</html>

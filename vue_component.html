@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="com">
+        <div>
+            <item v-for="data in datas" v-bind:d="data"></item>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        //顺序不能换
+        Vue.component(
+            "item",
+            {
+                //父组件向子组件传值
+                props: ["d"],
+                template: "<p>{{d.msg}}</p>"
+            }
+        )
+        var app = new Vue({
+            el: "#com",
+            data: {
+                datas: [
+                    {
+                        msg: "for1"
+                    },
+                    {
+                        msg: "for2"
+                    }
+                ]
+            }
+        });
+        
+    </script>
+  </body>
+</html>

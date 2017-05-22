@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="dom">
+        <!--<div v-bind:title="msg">
+            鼠标悬停几秒钟查看绑定值
+        </div>-->
+        <div v-bind:value="msg">
+            通过检查文档结构查看绑定值
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#dom",
+            data: {
+                msg: "Dom"
+            }
+        });
+    </script>
+  </body>
+</html>
